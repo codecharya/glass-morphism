@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+/* Reset and Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/773ac512-567c-4316-81c9-511db0c8a094);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Headings */
+h1 {
+  font-family: "Marhey", sans-serif;
+  font-size: clamp(1.8rem, 2vw, 2.5rem);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Popup Container */
+.popup-container {
+  width: min(900px, 90%);
+  background: rgba(133, 133, 133, 0.2);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+  padding: 20px;
+}
+
+/* Popup Body */
+.popup-body {
+  color: #f7f7f7;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Scrollbar Styling */
+.popup-body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.popup-body::-webkit-scrollbar-track {
+  background: rgba(79, 78, 78, 0.5);
+  border-radius: 0.8rem;
+}
+
+.popup-body::-webkit-scrollbar-thumb {
+  background: rgba(238, 238, 238, 0.7);
+  border-radius: 0.8rem;
+}
+
+/* About Section */
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.about-container h1 {
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.about-container p {
+  line-height: 1.6;
+  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+  text-align: center;
+  padding: 0 10px;
+}
+
+/* Image Frame */
+.img-frame {
+  overflow: hidden;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+  box-shadow: rgba(62, 63, 168, 0.8) 0px 10px 30px 8px, rgba(62, 63, 168, 0.8) 0px 0px 0px 2px;
+}
+
+.img-frame img {
+  width: 100%;
+  aspect-ratio: 6/7;
+  object-fit: cover;
+  transition: transform 1s;
+}
+
+.img-frame:hover img {
+  transform: rotate(4deg) scale(1.1);
+}
+
+/* Responsive Styles for Tablets */
+@media (max-width: 1024px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .about-container h1, .about-container p {
+    text-align: center;
+  }
+
+  .img-frame {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+/* Responsive Styles for Medium Devices (up to 750px) */
+@media (max-width: 750px) {
+  .about-container {
+    gap: 15px;
+    padding: 0 20px;
+  }
+
+  .hero-content {
+    margin-top: 20px;
+  }
+
+  .img-frame {
+    max-width: 180px;
+  }
+
+  .about-container p {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+}
+
+/* Responsive Styles for Mobile (up to 480px) */
+@media (max-width: 480px) {
+  .popup-body {
+    padding: 15px;
+  }
+
+  .about-container {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .img-frame {
+    max-width: 160px;
+  }
+
+  .about-container p {
+    font-size: 0.85rem;
+  }
+
+  .popup-container {
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
